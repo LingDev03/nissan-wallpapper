@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300");
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: rgba(224, 230, 235, 0.89);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  overflow: hidden;
+}
+
+/* Countdown Timer Styles */
+#countdowns-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 30px;
+  max-width: 900px;
+}
+
+.countdown-container {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 25px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-title {
+  color: rgba(224, 230, 235, 0.95);
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.countdown-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.countdown-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+.countdown-value {
+  font-size: 42px;
+  font-weight: 300;
+  color: #4dd0e1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.countdown-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(224, 230, 235, 0.8);
+}
+
+.column2 {
+    padding-left: 600px;
+}
+
+.column,
+.colon {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 86px;
+  line-height: 86px;
+}
+
+.column {
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+.colon {
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-transform: translateY(calc(50vh - 43px));
+          transform: translateY(calc(50vh - 43px));
+}
+.colon:after {
+  content: ':';
+}
+
+.num {
+  -webkit-transition: opacity 500ms, text-shadow 100ms;
+  transition: opacity 500ms, text-shadow 100ms;
+  opacity: 0.025;
+}
+.num.visible {
+  opacity: 1.0;
+  text-shadow: 1px 1px 0px #336699;
+}
+.num.close {
+  opacity: 0.35;
+}
+.num.far {
+  opacity: 0.15;
+}
+.num.distant {
+  opacity: 0.1;
+}
